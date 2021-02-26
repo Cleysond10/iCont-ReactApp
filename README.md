@@ -1,0 +1,1 @@
+# iCount is an intelligent counter application developed with React.js
