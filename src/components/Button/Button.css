@@ -1,6 +1,6 @@
 .button {
-    margin: 10px;
-    padding: 10px;
-    size: "lg";
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
 
 }

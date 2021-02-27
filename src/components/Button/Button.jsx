@@ -5,6 +5,6 @@ import { Button } from 'react-bootstrap';
 export default function index({ children, onClick, ...otherProps }) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <Button className="button" type="button" variant="success" size="lg" onClick={onClick} {...otherProps}>{children}</Button>
+    <Button className="button" type="button" variant="success" onClick={onClick} {...otherProps}>{children}</Button>
   );
 }

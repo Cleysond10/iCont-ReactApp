@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function index() {
   return (
@@ -9,8 +10,8 @@ export default function index() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/counter">Counter</Nav.Link>
-          <Nav.Link className="navLink" href="/bonus">Bonus</Nav.Link>
+          <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
+          <Nav.Link className="navLink" as={Link} to="/bonus">Bonus</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
