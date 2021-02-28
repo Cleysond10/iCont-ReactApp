@@ -1,6 +1,5 @@
 .navbar {
     background-color: rgb(10, 10, 61);
-    height: 60px;
 }
 .navTitle {
     font-weight: bolder;
@@ -12,5 +11,5 @@
 }
 .navLink2 {
     color: white;
-    margin-left: 50px;
+    margin-left: 35px;
 }
