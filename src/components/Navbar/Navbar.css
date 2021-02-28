@@ -1,12 +1,16 @@
 .navbar {
     background-color: rgb(10, 10, 61);
+    height: 60px;
 }
-.mr-auto {
+.navTitle {
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.navLink1 {
     color: white;
-    margin-left: 25px;
-    padding: 10px;
+    margin-left: 35px;
 }
-.navLink {
+.navLink2 {
     color: white;
     margin-left: 50px;
 }
