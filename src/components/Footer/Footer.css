@@ -4,13 +4,19 @@
     height: '60px';
     line-height: '60px';    
 }
-.footer__social {
-    margin-left: 75px;
-    padding: 50px;
+.footer__In {
+    margin: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.footer__git {
+    margin: 10px;
+    text-align: center;
     font-weight: bolder;
 }
 .footer__copyright {
     color: white;
-    margin-right: 75px;
-    padding: 50px;
+    font-weight: bolder;
+    margin: 10px;
+    text-align: center;
 }
