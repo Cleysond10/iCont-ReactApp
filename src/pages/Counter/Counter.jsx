@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 import Button from '../../components/Button/Button';
 import './Counter.css';
 
@@ -11,7 +12,7 @@ export default function Counter() {
     if (count > 0) {
       setCount(count - 1);
     } else {
-      alert('iCounter is already Zero');
+      toast.error('iCounter is already Zero');
     }
   };
 
@@ -57,7 +58,7 @@ export default function Counter() {
             size="lg"
             variant="primary"
             type="button"
-            onClick={() => { setCountPrint(count); }}
+            onClick={() => { setCountPrint(count); toast.info(`Value ${count} was saved.`); }}
           >
             Save
           </Button>

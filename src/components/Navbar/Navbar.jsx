@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function index() {
   return (
     <Navbar className="navbar" variant="dark" expand="lg">
-      <Navbar.Brand href="/">iCount</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">iCount</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
