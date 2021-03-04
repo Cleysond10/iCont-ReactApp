@@ -6,7 +6,6 @@ import './Counter.css';
 
 export default function Counter() {
   const [count, setCount] = useState(0);
-  const [countPrint, setCountPrint] = useState('');
 
   const handleClick = () => {
     if (count > 0) {
@@ -14,6 +13,11 @@ export default function Counter() {
     } else {
       toast.error('iCounter is already Zero');
     }
+  };
+
+  const onSave = () => {
+    localStorage.setItem('countSaved', count);
+    toast.info(`Value ${count} was saved.`);
   };
 
   return (
@@ -39,6 +43,7 @@ export default function Counter() {
           >
             -
           </Button>
+          <br />
           <Button
             size="lg"
             variant="warning"
@@ -47,18 +52,25 @@ export default function Counter() {
           >
             Reset
           </Button>
-          <br />
+          <Button
+            size="lg"
+            variant="dark"
+            type="button"
+            onClick={() => { setCount(Number(localStorage.getItem('countSaved'))); }}
+          >
+            Restore
+          </Button>
 
         </Col>
         <Col className="col2">
           <h2>
-            {`Saved Value: ${countPrint}`}
+            {`Saved Value: ${Number(localStorage.getItem('countSaved'))}`}
           </h2>
           <Button
             size="lg"
             variant="primary"
             type="button"
-            onClick={() => { setCountPrint(count); localStorage.setItem('countSaved', count); toast.info(`Value ${count} was saved.`); }}
+            onClick={onSave}
           >
             Save
           </Button>
@@ -66,7 +78,7 @@ export default function Counter() {
             size="lg"
             variant="light"
             type="button"
-            onClick={() => { setCountPrint(''); }}
+            onClick={() => { localStorage.removeItem('countSaved'); }}
           >
             Clear
           </Button>
