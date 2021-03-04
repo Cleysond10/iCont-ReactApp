@@ -8,7 +8,7 @@ export default function Bonus() {
   return (
     <>
       <div className="m-4">
-        {`In this page, you will find your saved counter ( = ${countSaved} ) converted to how many units, dozens, hundreds and even thousands it has!`}
+        {`In this page, you will find your saved value ( = ${countSaved} ) converted to how many units, dozens, hundreds and even thousands it has!`}
       </div>
 
       <Table className="table" striped bordered hover variant="dark">
@@ -21,12 +21,11 @@ export default function Bonus() {
           </tr>
         </thead>
         <tbody>
-          <tr className="lista">
-            {/* number.slice(-1) */}
+          <tr>
             <td>{countSaved}</td>
-            <td>{(countSaved / 10).toFixed(0)}</td>
-            <td>{(countSaved / 100).toFixed(0)}</td>
-            <td>{(countSaved / 1000).toFixed(0)}</td>
+            <td>{Math.floor((countSaved / 10))}</td>
+            <td>{Math.floor((countSaved / 100))}</td>
+            <td>{Math.floor((countSaved / 1000))}</td>
           </tr>
         </tbody>
       </Table>
