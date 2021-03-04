@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import {
+  Row, Col, Dropdown, ButtonGroup,
+} from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import Button from '../../components/Button/Button';
 import './Counter.css';
@@ -27,14 +29,18 @@ export default function Counter() {
           <h1>
             {`iCounter: ${count}`}
           </h1>
+          <Dropdown className="dropDown" as={ButtonGroup}>
+            <Button className="dropButton" size="lg" variant="success" onClick={() => { setCount(count + 1); }}> + </Button>
 
-          <Button
-            size="lg"
-            type="button"
-            onClick={() => { setCount(count + 1); }}
-          >
-            +
-          </Button>
+            <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => { setCount(count + 10); }}> +10 </Dropdown.Item>
+              <Dropdown.Item onClick={() => { setCount(count + 100); }}> +100</Dropdown.Item>
+              <Dropdown.Item onClick={() => { setCount(count + 1000); }}> +1000</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
           <Button
             size="lg"
             variant="danger"
