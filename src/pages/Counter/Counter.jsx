@@ -58,7 +58,7 @@ export default function Counter() {
             size="lg"
             variant="primary"
             type="button"
-            onClick={() => { setCountPrint(count); toast.info(`Value ${count} was saved.`); }}
+            onClick={() => { setCountPrint(count); localStorage.setItem('countSaved', count); toast.info(`Value ${count} was saved.`); }}
           >
             Save
           </Button>
