@@ -15,7 +15,7 @@ export default function Home() {
       <h1 className="title">Welcome to iCount!</h1>
       <p className="text">
         {`
-        This is the iCount App: a smart and useful counter developed in React. Here you'll find a number counter and much more features that will match your expectations of a beginner's developer - i hope. `}
+        This is the iCount App: a smart and useful counter application developed in React. Here you'll find a number counter and much more features that will match your expectations of a beginner's developer - i hope. `}
         &#x1F648;
       </p>
       <Carousel className="carousel">
